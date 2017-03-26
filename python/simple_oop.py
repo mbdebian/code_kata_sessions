@@ -30,7 +30,7 @@ class ClassA:
 class ClassB(ClassA):
     __new_id = 0
     __new_name = "ClassB - Name"
-    
+
     def __init__(self):
         super().__init__(self)
 
