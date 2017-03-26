@@ -40,6 +40,13 @@ public class DemoApplication {
 	}
 
 	@Bean
+	public CommandLineRunner showCryptographicCapabilities(ApplicationContext ctxt) {
+		return args -> {
+			logger.info("[CRYPTO] Maximum allowed key length: " + javax.crypto.Cipher.getMaxAllowedKeyLength("just some string"));
+		};
+	}
+
+	@Bean
 	public CommandLineRunner secondguy(ApplicationContext ctxt) {
 		return args -> {
 			System.out.println("[secondguy] IS RUNNING");
